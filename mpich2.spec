@@ -10,7 +10,7 @@ Source1:	mpich2.macros
 Patch0:		mpich2-modules.patch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildRequires:	libXt-devel, libuuid-devel
-BuildRequires:	java-devel-openjdk, gcc-gfortran gcc-g++
+BuildRequires:	java-devel-openjdk, gcc-gfortran gcc-c++
 BuildRequires:	emacs-common, perl, python
 Obsoletes:	%{name}-libs < 1.1.1
 Requires:	environment-modules
@@ -333,7 +333,7 @@ fi
 %changelog
 * Tue May 8 2012 Clint Savage <herlo@gooseproject.org> 1.1.1-2.3.goose.1
 - Rebuilding for GoOSe 6.0
-- Added BR for gcc-g++
+- Added BR for gcc-c++
 
 * Thu Aug 5 2010 Jay Fenlason <fenlason@redhat.com> 1.1.1-2.3
 - ExcludeArch PowerPC and S390{,x} because they no longer have
